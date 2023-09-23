@@ -182,7 +182,6 @@ header .container {
 
   color: var(--white);
   background-color: var(--accent);
-  border-radius: 5px;
 }
 
 .btn--link::before,
@@ -579,7 +578,7 @@ header .container {
   gap: 4rem;
   flex-direction: column;
   padding-top: 2rem;
-  height: 1900px;
+  height: 1950px;
 }
 
 @media (min-width: 1024px) {
@@ -655,18 +654,18 @@ header .container {
 .about-content {
   position: relative;
   height: 750px;
-  top: -450px;
+  top: -470px;
 }
 
 @media (min-width: 464px) {
   .about-content {
-    top: -400px;
+    top: -420px;
   }
 }
 
 @media (min-width: 586px) {
   .about-content {
-    top: -350px;
+    top: -370px;
   }
 }
 
@@ -682,6 +681,10 @@ header .container {
 
 .about-content h3 {
   max-width: 768px;
+}
+
+.about-double {
+  margin-top: 1rem;
 }
 
 .about-double img {
