@@ -510,7 +510,8 @@ header .container {
   aspect-ratio: 16 / 9;
   background-image: url("./images/hero.jpg");
   background-position: center;
-  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-dark,
@@ -645,9 +646,10 @@ header .container {
   width: 100%;
   aspect-ratio: 16 / 9;
 
-  background-image: url("./images/2.jpg");
-  background-position: top 50% right 25%;
-  background-attachment: fixed;
+  background: url("./images/2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .about-content {
@@ -782,5 +784,12 @@ footer a:visited {
 
   footer a {
     font-size: var(--fs-550);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero,
+  .about-us-section {
+    background-attachment: fixed;
   }
 }
