@@ -578,7 +578,7 @@ header .container {
   gap: 4rem;
   flex-direction: column;
   padding-top: 2rem;
-  height: 1950px;
+  height: 2000px;
 }
 
 @media (min-width: 1024px) {
@@ -654,18 +654,18 @@ header .container {
 .about-content {
   position: relative;
   height: 750px;
-  top: -470px;
+  top: -500px;
 }
 
 @media (min-width: 464px) {
   .about-content {
-    top: -420px;
+    top: -450px;
   }
 }
 
 @media (min-width: 586px) {
   .about-content {
-    top: -370px;
+    top: -400px;
   }
 }
 
