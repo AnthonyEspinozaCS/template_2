@@ -1,0 +1,148 @@
+.hero {
+  min-height: calc(20vh + 125px);
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.about-us-section {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  background: var(--white);
+}
+
+.container h2 {
+  font-size: var(--fs-700);
+}
+
+.about-lines {
+  display: inline-block;
+}
+
+.about-lines::after,
+.about-lines::before {
+  left: 275px;
+}
+
+.board .about-lines {
+  padding-right: 100%;
+}
+
+.board .about-lines::after,
+.board .about-lines::before {
+  left: 135px;
+}
+
+@media (min-width: 535px) {
+  .board .about-lines {
+    padding: 0;
+  }
+
+  .board .about-lines::before,
+  .board .about-lines::after {
+    left: 455px;
+  }
+}
+
+.about-img {
+  position: relative;
+  margin-inline: auto;
+}
+
+.about-img img {
+  position: relative;
+  width: 90%;
+  min-width: 300px;
+  max-width: 600px;
+  height: auto;
+  margin-left: auto;
+  aspect-ratio: 3 / 4;
+
+  z-index: 1;
+}
+
+.about-img::after,
+.about-img::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  min-width: 300px;
+  max-width: 600px;
+  height: auto;
+  left: 0;
+  bottom: 0;
+  aspect-ratio: 3 / 4;
+  transform: translateY(5%);
+}
+
+.about-img::after {
+  background-color: var(--accent);
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.about-img::before {
+  background-image: url("./images/dog-enthusiasts.jpg");
+}
+
+.about-us-section h3 {
+  position: relative;
+  width: fit-content;
+  padding-top: 1rem;
+
+  font-size: var(--fs-550);
+  font-weight: 700;
+}
+
+.about-us-section h3::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -10px;
+
+  background-color: var(--accent);
+}
+
+.board {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.board--member {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.board--photo {
+  max-width: min(600px, 100%);
+  width: 100%;
+  height: auto;
+  margin-inline: auto;
+
+  border-bottom: 3px solid var(--accent);
+}
+
+.board--bio h3 {
+  padding-bottom: 2rem;
+  font-size: var(--fs-600);
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .board--member {
+    max-width: 100%;
+    flex-direction: row;
+  }
+
+  .board--member > * {
+    flex: 1 1 calc(320px - 2rem);
+  }
+}

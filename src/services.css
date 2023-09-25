@@ -1,0 +1,276 @@
+.hero {
+  min-height: calc(20vh + 125px);
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.service h2,
+.service-contact h2 {
+  font-size: var(--fs-700);
+}
+
+.service > h3,
+.other-services div > h3 {
+  position: relative;
+  width: fit-content;
+  margin: 2rem 0;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.service > h3::after,
+.other-services div > h3::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+
+  background-color: var(--accent);
+}
+
+@media (min-width: 475px) {
+  .about-lines {
+    display: inline-block;
+  }
+
+  .about-lines::after,
+  .about-lines::before {
+    left: 390px;
+  }
+}
+
+.three-card-section {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3rem 0 1rem;
+  height: auto;
+}
+
+.card {
+  flex: 0 1 calc(350px - 2rem);
+  margin-top: 0;
+  height: auto;
+
+  color: var(--accent);
+  background-color: var(--white);
+  box-shadow: 0px 0px 3px var(--accent);
+}
+
+.card-content {
+  padding: 2rem 0;
+}
+
+.card-content h3 {
+  font-size: var(--fs-550);
+}
+
+.card-content span {
+  display: block;
+}
+
+.card ul {
+  display: flex;
+  gap: 0.75rem;
+  flex-direction: column;
+  padding: 1rem 0;
+  margin: 0;
+  font-size: var(--fs-medium);
+  list-style: none;
+}
+
+.subscript {
+  position: relative;
+}
+
+.card-content h4 {
+  width: fit-content;
+  font-size: 1.25rem;
+  margin-inline: auto;
+}
+
+h4.subscript::after {
+  content: "/month";
+  position: relative;
+  bottom: 0;
+  left: 0;
+  font-size: calc(1.25rem * 0.75);
+}
+
+li.subscript::after {
+  content: "";
+  position: relative;
+  bottom: 0;
+  left: 0;
+  font-size: calc(var(--fs-medium) * 0.75);
+}
+
+li:nth-of-type(1).subscript::after {
+  content: "/week";
+}
+
+li:nth-of-type(2).subscript::after {
+  content: "/walk";
+}
+
+.other-hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+
+  aspect-ratio: 16 / 9;
+  background-image: url("./images/4.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.other-services {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding-block: 0 4rem;
+  margin-top: -100px;
+}
+
+.other-services > .service-item {
+  position: relative;
+  display: flex;
+  flex: 1 1 calc(450px - 3rem);
+  flex-direction: column;
+
+  box-shadow: 0px 0px 3px var(--dark);
+}
+
+.other-services > .service-item::after {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 10px;
+  top: -10px;
+  left: 50%;
+
+  background-color: var(--grey);
+  transform: translateX(-50%);
+}
+
+.service-description {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2rem;
+  padding: 2rem 1rem;
+
+  color: var(--white);
+  background-color: var(--accent);
+}
+
+.other-services .service-description h3 {
+  margin-block: 0;
+}
+
+.other-services .service-description h3::after {
+  background-color: var(--white);
+}
+
+.other-services .service-price > h3::after {
+  display: none;
+}
+
+.service-price {
+  display: grid;
+  grid-template-areas:
+    "sm med large"
+    "sm-num med-num large-num";
+  text-align: center;
+}
+
+.other-services .service-price h3 {
+  width: 100%;
+}
+
+.other-services .service-price h3::before {
+  content: "/day";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+
+  font-size: calc(1.5rem * 0.5);
+
+  transform: translateX(-25%);
+}
+
+.service-price h3:nth-of-type(1),
+.service-price h3:nth-of-type(2) {
+  border-right: 2px solid var(--white);
+}
+
+.service-price h4:nth-of-type(1) {
+  grid-area: sm;
+}
+.service-price h4:nth-of-type(2) {
+  grid-area: med;
+}
+.service-price h4:nth-of-type(3) {
+  grid-area: large;
+}
+.service-price h3:nth-of-type(1) {
+  grid-area: sm-num;
+}
+.service-price h3:nth-of-type(2) {
+  grid-area: med-num;
+}
+.service-price h3:nth-of-type(3) {
+  grid-area: large-num;
+}
+
+.other-services .service-description > .service-price-solo {
+  margin-top: auto;
+  margin-inline: auto;
+}
+
+.other-services .service-description > .service-price-solo::after {
+  content: "/day";
+  position: absolute;
+  height: fit-content;
+  bottom: 0;
+  left: 100%;
+
+  font-size: 0.75rem;
+
+  background-color: transparent;
+}
+
+.calendly-element {
+  width: 100%;
+}
+
+.service-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.service-contact .about-lines {
+  display: block;
+}
+
+@media (min-width: 520px) {
+  .service-contact .about-lines {
+    display: inline-block;
+  }
+
+  .service-contact .about-lines::after,
+  .service-contact .about-lines::before {
+    left: 425px;
+  }
+}

@@ -55,7 +55,7 @@
             </li>
             <li class="">
               <a
-                href="/about-us.html"
+                href="/about.html"
                 class="ff-sans-normal fs-nav text-black">
                 About Us
               </a>
@@ -69,7 +69,7 @@
             </li>
             <li class="">
               <a
-                href="/services.html#contact-us"
+                href="/index.html#contact-us"
                 class="ff-sans-normal fs-nav text-black">
                 Contact Us
               </a>
@@ -82,10 +82,10 @@
     <section class="hero">
       <div class="hero-dark"></div>
       <div class="container hero-text">
-        <h1 class="text-white">Southeast Dog Walking Company</h1>
+        <h1 class="text-white">Southwest Dog Walking Company</h1>
         <h3 class="text-white">We know they're family, we'll treat them like it!</h3>
         <a
-          href="/services.html#contact-us"
+          href="#contact-us"
           class="btn--link">
           Get in Touch
         </a>
@@ -113,7 +113,7 @@
               Read More
               <img
                 src="./src/images/right-arrow.svg"
-                alt="Outline of an arrow." />
+                alt="" />
             </a>
           </div>
         </div>
@@ -134,7 +134,7 @@
               Read More
               <img
                 src="./src/images/right-arrow.svg"
-                alt="Outline of an arrow." />
+                alt="" />
             </a>
           </div>
         </div>
@@ -155,7 +155,7 @@
               Read More
               <img
                 src="./src/images/right-arrow.svg"
-                alt="Outline of an arrow." />
+                alt="" />
             </a>
           </div>
         </div>
@@ -168,7 +168,7 @@
             <h2 class="fs-550 bold">
               <span class="about-lines--2">
                 <span class="text-accent about-lines">About</span>
-                Southeast
+                Southwest
               </span>
               Dog Walking Company
             </h2>
@@ -189,7 +189,7 @@
                 </h3>
                 <p>Our journey began with a simple idea: to offer a reliable and trustworthy dog walking service that pet owners could rely on.</p>
                 <a
-                  href="/about-us.html"
+                  href="#contact-us"
                   class="btn--link btn--link--inverted">
                   Who We Are
                 </a>
@@ -213,7 +213,7 @@
               Read More
               <img
                 src="./src/images/right-arrow.svg"
-                alt="Outline of an arrow." />
+                alt="" />
             </a>
           </div>
         </div>
@@ -228,7 +228,7 @@
               Read More
               <img
                 src="./src/images/right-arrow.svg"
-                alt="Outline of an arrow." />
+                alt="" />
             </a>
           </div>
         </div>
@@ -243,33 +243,60 @@
               Read More
               <img
                 src="./src/images/right-arrow.svg"
-                alt="Outline of an arrow." />
+                alt="" />
             </a>
           </div>
         </div>
       </section>
 
-      <section
-        class="contact-us"
-        id="contact-us">
+      <section class="contact-us">
         <div class="contact-container container">
           <h2 class="fs-700 bold">
-            <span class="text-accent about-lines contact-lines">Join Us</span>
-            in Making Tails Wag
+            <span class="about-lines--2 contact-lines">
+              <span class="text-accent about-lines contact-lines">Bark</span>
+              at us
+            </span>
           </h2>
-          <p>
-            At Southwest Dog Walking Company, we're more than a service provider; we're a family of dog lovers dedicated to the well-being of your furry companions. Whether you're seeking daily dog walks, exceptional pet care, or a loving place for
-            your pup to play, we're here to meet all your canine needs.
-          </p>
-          <p>
-            Ready to provide your dog with the love, exercise, and care they deserve? Let's embark on this exciting journey together. Contact us today to schedule a consultation and discover how Southwest Dog Walking Company can become your trusted
-            partner in ensuring your dog lives a happy and healthy life. Don't wait—take the first step in making your dog's tail wag with joy!
-          </p>
-          <a
-            href="./services.html#contact-us"
-            class="btn--link btn--link--mono">
-            Sign Up
-          </a>
+          <p>Whether you have questions about our services, want to schedule a consultation, or simply wish to chat about how we can best serve you and your beloved pet, we're here to help.</p>
+          <form
+            id="contact-form"
+            class="contact-form">
+            <input
+              type="hidden"
+              name="client" />
+            <input
+              type="hidden"
+              name="client_name" />
+            <div class="contact-form--half">
+              <label for="user_name">Name</label>
+              <input
+                type="text"
+                name="user_name" />
+            </div>
+            <div class="contact-form--half">
+              <label for="user_email">Email</label>
+              <input
+                type="email"
+                name="user_email" />
+            </div>
+            <div class="contact-form--half">
+              <label for="user_name">Your Phone Number</label>
+              <input
+                type="text"
+                name="user_name" />
+            </div>
+            <div class="contact-form--half">
+              <label for="user_email">Your Company</label>
+              <input
+                type="email"
+                name="user_email" />
+            </div>
+            <div class="contact-form--full">
+              <label for="message">Message</label>
+              <textarea name="message"></textarea>
+            </div>
+            <button class="btn--link">Submit</button>
+          </form>
         </div>
       </section>
     </section>
@@ -286,8 +313,7 @@
         </a>
         <ul class="fs-medium text-white">
           <li><a href="/">Home</a></li>
-          <li><a href="/about-us.html">About Us</a></li>
-          <li><a href="/services.html">Services</a></li>
+          <li><a href="/about.html">About Us</a></li>
           <li><a href="/index.html#contact-us">Contact Us</a></li>
         </ul>
       </section>
