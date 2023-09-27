@@ -27,6 +27,9 @@
       src="https://assets.calendly.com/assets/external/widget.js"
       async
       defer></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
   <body>
     <header
@@ -323,16 +326,16 @@
               name="user_email" />
           </div>
           <div class="contact-form--half">
-            <label for="user_name">Your Phone Number</label>
+            <label for="user_phone">Your Phone Number</label>
             <input
-              type="text"
-              name="user_name" />
+              type="tel"
+              name="user_phone" />
           </div>
           <div class="contact-form--half">
-            <label for="user_email">Your Company</label>
+            <label for="user_company">Your Company</label>
             <input
-              type="email"
-              name="user_email" />
+              type="text"
+              name="user_company" />
           </div>
           <div class="contact-form--full">
             <label for="message">Message</label>
@@ -376,6 +379,10 @@
       defer></script>
     <script
       src="./src/wait.js"
+      async
+      defer></script>
+    <script
+      src="./src/contact.js"
       async
       defer></script>
   </body>

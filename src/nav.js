@@ -1,5 +1,7 @@
 const primaryNav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".mobile-nav-toggle");
+const primaryHeader = document.querySelector(".primary-header");
+const headerLogo = document.querySelector(".header-logo");
 
 navToggle.addEventListener("click", () => {
   const visibility = primaryNav.getAttribute("data-visible");
@@ -22,3 +24,17 @@ function myFunction(number) {
   if (btnText.innerText === "Read More") btnText.innerText = "Read Less";
   else btnText.innerText = "Read More";
 }
+
+// after scrolling down 100px, add .scroll class to the #cs-navigation
+window.addEventListener("scroll", () => {
+  const scroll = document.documentElement.scrollTop;
+  if (scroll >= 100) {
+    primaryHeader.classList.add("loading");
+    headerLogo.classList.remove("logo-white");
+    headerLogo.classList.add("invert");
+  } else {
+    primaryHeader.classList.remove("loading");
+    headerLogo.classList.add("logo-white");
+    headerLogo.classList.remove("invert");
+  }
+});

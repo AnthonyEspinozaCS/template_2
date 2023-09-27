@@ -69,7 +69,6 @@ picture {
 html,
 body {
   position: relative;
-  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -160,14 +159,15 @@ header .container {
   position: relative;
   display: flex;
   gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   max-width: 80rem;
   height: 125px;
   margin: 0 auto;
   padding: 0;
 
-  align-items: center;
-  justify-content: space-between;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -398,6 +398,28 @@ header .container {
   z-index: 9999;
 }
 
+.primary-header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  transition-delay: 0.15s;
+}
+
+.loading.primary-header::after {
+  height: 100%;
+
+  opacity: 1;
+  background-color: var(--accent);
+}
+
 .mobile-nav-toggle {
   display: none;
 }
@@ -406,8 +428,17 @@ header .container {
   max-height: 100px;
   margin-left: 1rem;
 
-  background-color: var(--white);
+  transition: 0.3s;
+  transition-delay: 0.15s;
   border-radius: 50%;
+}
+
+.header-logo.loading img {
+  filter: invert(100%);
+}
+
+.header-logo.logo-white img {
+  background-color: var(--white);
 }
 
 /* Navigation */

@@ -1,7 +1,13 @@
 .hero {
-  min-height: calc(20vh + 125px);
+  min-height: calc(25vh + 125px);
   flex-wrap: wrap;
-  align-content: flex-end;
+  align-content: center;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 600px;
+  }
 }
 
 .hero-text {
