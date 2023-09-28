@@ -776,12 +776,6 @@ header .container {
 .about-us-section {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-
-  background: url("./images/2.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .about-content {
@@ -1077,8 +1071,7 @@ footer a:visited {
 }
 
 @media (min-width: 1024px) {
-  .hero,
-  .about-us-section {
+  .hero {
     background-attachment: fixed;
   }
 }
